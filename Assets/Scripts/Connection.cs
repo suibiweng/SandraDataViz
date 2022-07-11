@@ -7,6 +7,7 @@ public class Connection : MonoBehaviour
     public Node n1,n2;
     public Color high_light_color,originColor;
     MeshRenderer meshRenderer;
+    Manager m;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,14 @@ public class Connection : MonoBehaviour
         n2.addConnectedNode(n1);
 
         meshRenderer = GetComponent<MeshRenderer>();
+        m= GameObject.FindObjectOfType<Manager>();
+
+        high_light_color = m.ConnectlineColor;
         originColor = meshRenderer.material.color ;
+
+
+
+
 
 
     }

@@ -35,7 +35,7 @@ public class Node : MonoBehaviour
 
 
     public void addConnection(Connection c){
-        c.high_light_color = ConnectlineColor;
+      //  c.high_light_color = ConnectlineColor;
         connections.Add(c);
 
 

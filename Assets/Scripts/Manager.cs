@@ -42,6 +42,21 @@ public class Manager : MonoBehaviour
     void Update()
     {
 
+        foreach (var n in nodes) {
+            n.connectionColor = ConnectedColor;
+            n.touchColor = touchColor;
+            n.ConnectlineColor = ConnectlineColor;
+
+        }
+
+        foreach (var c in colums) {
+            c.connected = C_ConnectedColor;
+            c.OutlineColor = OutlineColor;
+            c.titleHilight = TitleColor;
+            c.ignore = ignoreColor;
+
+        }
+
         debugTest(Input.GetKeyDown(KeyCode.A), Input.GetKeyUp(KeyCode.A), nodes[0]);
         debugTest(Input.GetKeyDown(KeyCode.B), Input.GetKeyUp(KeyCode.B), nodes[1]);
         debugTest(Input.GetKeyDown(KeyCode.C), Input.GetKeyUp(KeyCode.C), nodes[2]);
